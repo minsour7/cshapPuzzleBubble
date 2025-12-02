@@ -33,13 +33,13 @@ namespace Server.Game
 
         public void Init()
         {
-            for(int i = 0; i < G_COLS_SLOT_BUFFER_SIZE; i++)
+            for (int i = 0; i < G_COLS_SLOT_BUFFER_SIZE; i++)
             {
                 colsArray[i] = new BubbleCols();
             }
         }
 
-        public bool AddIndexer( int id )
+        public bool AddIndexer(int id)
         {
             //lock (_lock)
             {
@@ -54,9 +54,9 @@ namespace Server.Game
         {
             int minOffset = G_COLS_SLOT_BUFFER_SIZE;
 
-            foreach(Indexer indexer in _indexers.Values )
+            foreach (Indexer indexer in _indexers.Values)
             {
-                if(minOffset > indexer.Offset )
+                if (minOffset > indexer.Offset)
                 {
                     minOffset = indexer.Offset;
                 }
@@ -78,15 +78,15 @@ namespace Server.Game
             return maxOffset;
         }
 
-        public BubbleCols Next(int indexerId )
+        public BubbleCols Next(int indexerId)
         {
             int maxOffset = 0;
 
             //lock(_lock)
             {
-                maxOffset= GetMaxOffSet();
+                maxOffset = GetMaxOffSet();
                 //재할당
-                if( maxOffset >= G_COLS_SLOT_RE_SIZE_RANGE)
+                if (maxOffset >= G_COLS_SLOT_RE_SIZE_RANGE)
                 {
                     int minOffset = GetMinOffSet();
 
@@ -98,17 +98,17 @@ namespace Server.Game
             }
         }
 
-        public void Clean( int minOffset , int maxOffset )
+        public void Clean(int minOffset, int maxOffset)
         {
             Array.Copy(colsArray, minOffset, colsArray, 0, colsArray.Length - minOffset);
 
             //재활당
-            for( int i = colsArray.Length - minOffset; i<colsArray.Length; i++)
+            for (int i = colsArray.Length - minOffset; i < colsArray.Length; i++)
             {
                 colsArray[i] = new BubbleCols();
             }
 
-            foreach( Indexer indexer in _indexers.Values)
+            foreach (Indexer indexer in _indexers.Values)
             {
                 indexer.Offset -= minOffset;
             }

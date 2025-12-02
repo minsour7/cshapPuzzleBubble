@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj": {}
+    "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj": {}
   },
   "projects": {
-    "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj": {
+    "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj",
+        "projectUniqueName": "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj",
         "projectName": "ServerCore",
-        "projectPath": "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj",
+        "projectPath": "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj",
         "packagesPath": "C:\\Users\\blackstorm_kmsu143\\.nuget\\packages\\",
         "outputPath": "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\obj\\",
         "projectStyle": "PackageReference",
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,14 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.33.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,26 +66,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

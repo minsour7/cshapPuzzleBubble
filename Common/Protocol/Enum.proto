@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package Protocol;
+option csharp_namespace = "Google.Protobuf.Protocol";
+
+enum MsgId 
+{
+	S_CONNECT = 0;
+	C_ROOM_INFO = 1;
+	S_ROOM_INFO = 2;
+	C_JOIN_GAME_ROOM = 3;
+	S_JOIN_GAME_ROOM = 4;
+	S_LEAVE_GAME_ROOM = 5;
+	S_SPAWN = 6;
+	S_DESPAWN = 7;
+	C_START_GAME = 8;
+	S_START_GAME = 9;
+	C_SHOOT = 10;
+	S_SHOOT = 11;
+	C_MOVE = 12;
+	S_MOVE = 13;
+	C_NEXT_COLS_BUBBLE = 14;
+	S_NEXT_COLS_BUBBLE = 15;
+	S_NEXT_COLS_BUBBLE_PEER = 16;
+	C_NEXT_COLS_BUBBLE_LIST = 17;
+	S_NEXT_COLS_BUBBLE_LIST = 18;
+	C_NEXT_BUBBLES = 19;
+	S_NEXT_BUBBLES = 20;
+	S_NEXT_BUBBLES_PEER = 21;
+	C_FIXED_BUBBLE_SLOT = 22;
+	S_FIXED_BUBBLE_SLOT_PEER = 23;
+	C_PLAYER_GAME_OVER = 24;
+	S_PLAYER_GAME_OVER_BROAD_CAST = 25;
+	S_GAME_RESULT = 26;
+
+}
+
+enum PacketState
+{
+	NONE = 0;
+	SENDED = 1;
+	RECVED = 2;
+}
+
+enum GameRoomState
+{
+	LOBBY = 0;
+	GAME = 1;
+	GAME_RESULT = 2;
+}

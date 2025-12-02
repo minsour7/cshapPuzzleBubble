@@ -6,7 +6,7 @@ namespace Server.Game
 {
     class Indexer
     {
-        public int Id 
+        public int Id
         {
             get;
             set;
@@ -15,7 +15,7 @@ namespace Server.Game
 
         BubbleMap _bubbleMap;
 
-        public Indexer(int id , BubbleMap bubbleMap)
+        public Indexer(int id, BubbleMap bubbleMap)
         {
             this.Id = id;
             _bubbleMap = bubbleMap;

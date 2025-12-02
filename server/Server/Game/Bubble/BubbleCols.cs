@@ -5,17 +5,16 @@ using System.Threading;
 
 namespace Server.Game
 {
-
-
     class Bubble
     {
         E_BUBBLE_TYPE _bubbleType;
 
-        static int seed = 0 ;
+        static int seed = 0;
 
         object _lock = new object();
 
-        public E_BUBBLE_TYPE BubbleType { 
+        public E_BUBBLE_TYPE BubbleType
+        {
             get { return _bubbleType; }
             set { _bubbleType = value; }
         }
@@ -23,7 +22,7 @@ namespace Server.Game
         public int getSeed()
         {
             return seed++;
-        }       
+        }
 
         public Bubble()
         {
@@ -44,7 +43,7 @@ namespace Server.Game
 
             return (E_BUBBLE_TYPE)rand.Next((int)E_BUBBLE_TYPE.RED, (int)E_BUBBLE_TYPE.PURPLE + 1);
             //return bt;
-            
+
         }
 
         public override string ToString()
@@ -54,8 +53,8 @@ namespace Server.Game
 
     }
 
- 
-    class BubbleCols 
+
+    class BubbleCols
     {
         //static int seed = 0;
 
