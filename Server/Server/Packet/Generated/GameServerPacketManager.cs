@@ -6,8 +6,33 @@ using System.Collections.Generic;
 
 public enum MsgId
 {
-	S_Connected = 1,
-	C_Test = 2,
+	S_Connect = 1,
+	C_RoomInfo = 2,
+	S_RoomInfo = 3,
+	C_JoinGameRoom = 4,
+	S_JoinGameRoom = 5,
+	S_LeaveGameRoom = 6,
+	S_Spawn = 7,
+	S_Despawn = 8,
+	C_StartGame = 9,
+	S_StartGame = 10,
+	C_Shoot = 11,
+	S_Shoot = 12,
+	C_Move = 13,
+	S_Move = 14,
+	C_NextBubbles = 15,
+	S_NextBubbles = 16,
+	S_NextBubblesPeer = 17,
+	C_NextColsBubble = 18,
+	S_NextColsBubble = 19,
+	S_NextColsBubblePeer = 20,
+	C_NextColsBubbleList = 21,
+	S_NextColsBubbleList = 22,
+	C_FixedBubbleSlot = 23,
+	S_FixedBubbleSlotPeer = 24,
+	C_PlayerGameOver = 25,
+	S_PlayerGameOverBroadCast = 26,
+	S_GameResult = 27,
 }
 
 class PacketManager
@@ -29,8 +54,26 @@ class PacketManager
 
 	public void Register()
 	{		
-		_onRecv.Add((ushort)MsgId.C_Test, MakePacket<C_Test>);
-		_handler.Add((ushort)MsgId.C_Test, PacketHandler.C_TestHandler);
+		_onRecv.Add((ushort)MsgId.C_RoomInfo, MakePacket<C_RoomInfo>);
+		_handler.Add((ushort)MsgId.C_RoomInfo, PacketHandler.C_RoomInfoHandler);		
+		_onRecv.Add((ushort)MsgId.C_JoinGameRoom, MakePacket<C_JoinGameRoom>);
+		_handler.Add((ushort)MsgId.C_JoinGameRoom, PacketHandler.C_JoinGameRoomHandler);		
+		_onRecv.Add((ushort)MsgId.C_StartGame, MakePacket<C_StartGame>);
+		_handler.Add((ushort)MsgId.C_StartGame, PacketHandler.C_StartGameHandler);		
+		_onRecv.Add((ushort)MsgId.C_Shoot, MakePacket<C_Shoot>);
+		_handler.Add((ushort)MsgId.C_Shoot, PacketHandler.C_ShootHandler);		
+		_onRecv.Add((ushort)MsgId.C_Move, MakePacket<C_Move>);
+		_handler.Add((ushort)MsgId.C_Move, PacketHandler.C_MoveHandler);		
+		_onRecv.Add((ushort)MsgId.C_NextBubbles, MakePacket<C_NextBubbles>);
+		_handler.Add((ushort)MsgId.C_NextBubbles, PacketHandler.C_NextBubblesHandler);		
+		_onRecv.Add((ushort)MsgId.C_NextColsBubble, MakePacket<C_NextColsBubble>);
+		_handler.Add((ushort)MsgId.C_NextColsBubble, PacketHandler.C_NextColsBubbleHandler);		
+		_onRecv.Add((ushort)MsgId.C_NextColsBubbleList, MakePacket<C_NextColsBubbleList>);
+		_handler.Add((ushort)MsgId.C_NextColsBubbleList, PacketHandler.C_NextColsBubbleListHandler);		
+		_onRecv.Add((ushort)MsgId.C_FixedBubbleSlot, MakePacket<C_FixedBubbleSlot>);
+		_handler.Add((ushort)MsgId.C_FixedBubbleSlot, PacketHandler.C_FixedBubbleSlotHandler);		
+		_onRecv.Add((ushort)MsgId.C_PlayerGameOver, MakePacket<C_PlayerGameOver>);
+		_handler.Add((ushort)MsgId.C_PlayerGameOver, PacketHandler.C_PlayerGameOverHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

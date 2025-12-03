@@ -8,17 +8,17 @@ namespace Server.Game
 {
 
 
-    public enum E_BUBBLE_TYPE
-    {
-        NONE = 0,
-        RED = 1,
-        BLUE = 2,
-        YELLOW = 3,
-        GREEN = 4,
-        PURPLE = 5,
-        SPECIAL = 6,
-        MAX
-    }
+    //public enum E_BUBBLE_TYPE
+    //{
+    //    NONE = 0,
+    //    RED = 1,
+    //    BLUE = 2,
+    //    YELLOW = 3,
+    //    GREEN = 4,
+    //    PURPLE = 5,
+    //    SPECIAL = 6,
+    //    MAX
+    //}
     class BubbleMap
     {
         public static readonly int G_BUBBLE_COL_COUNT = 8;

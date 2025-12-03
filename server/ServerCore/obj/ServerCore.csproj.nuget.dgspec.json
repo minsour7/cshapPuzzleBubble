@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj": {}
+    "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj": {}
   },
   "projects": {
-    "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj": {
+    "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj",
+        "projectUniqueName": "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj",
         "projectName": "ServerCore",
-        "projectPath": "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj",
+        "projectPath": "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj",
         "packagesPath": "C:\\Users\\blackstorm_kmsu143\\.nuget\\packages\\",
         "outputPath": "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\obj\\",
         "projectStyle": "PackageReference",

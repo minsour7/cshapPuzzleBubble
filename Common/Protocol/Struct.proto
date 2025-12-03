@@ -5,8 +5,28 @@ option csharp_namespace = "Google.Protobuf.Protocol";
 
 import "Enum.proto";
 
-message RoomInfo 
+message PlayerInfo
 {
-	int32 roomId = 1;
-	int32 mapId = 2;
+    int32 PlayerId = 1;
+    string Name = 2;
+    int32 PosX = 3;
+    int32 PosY = 4;
+}
+
+message RoomInfo
+{
+    int32 RoomId = 1;
+    repeated PlayerInfo Players = 2;
+}
+
+message ColsBubbles
+{
+    repeated int32 BubbleTypes = 1;
+}
+
+message PlayerRank
+{
+    int32 PlayerId = 1;
+    int32 Rank = 2;
+    bool DisConnected = 3;
 }

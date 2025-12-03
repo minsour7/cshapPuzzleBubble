@@ -17,4 +17,4 @@ START PacketGenerator.exe -o %2 -t %3
 
 CD %curPath%
 
-EXIT
+pause

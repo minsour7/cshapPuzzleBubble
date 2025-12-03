@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.Protocol;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -27,7 +28,7 @@ namespace Server.Game
         public Bubble()
         {
             Random rand = new Random(unchecked((int)DateTime.Now.Ticks) + seed++);
-            _bubbleType = (E_BUBBLE_TYPE)rand.Next((int)E_BUBBLE_TYPE.RED, (int)E_BUBBLE_TYPE.PURPLE + 1);
+            _bubbleType = (E_BUBBLE_TYPE)rand.Next((int)E_BUBBLE_TYPE.Red, (int)E_BUBBLE_TYPE.Purple + 1);
             //Thread.Sleep(5);
             if (seed > 1000000)
                 seed = 0;
@@ -41,7 +42,7 @@ namespace Server.Game
             if (seed > 1000000)
                 seed = 0;
 
-            return (E_BUBBLE_TYPE)rand.Next((int)E_BUBBLE_TYPE.RED, (int)E_BUBBLE_TYPE.PURPLE + 1);
+            return (E_BUBBLE_TYPE)rand.Next((int)E_BUBBLE_TYPE.Red, (int)E_BUBBLE_TYPE.Purple + 1);
             //return bt;
 
         }

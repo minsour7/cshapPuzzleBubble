@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4usBuRhkc3Y=",
+  "dgSpecHash": "Yqh0pM/cZvU=",
   "success": true,
-  "projectFilePath": "D:\\Git\\cshapPuzzleBubble\\Server\\ServerCore\\ServerCore.csproj",
+  "projectFilePath": "D:\\Git\\cshapPuzzleBubble\\server\\ServerCore\\ServerCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\blackstorm_kmsu143\\.nuget\\packages\\google.protobuf\\3.33.0\\google.protobuf.3.33.0.nupkg.sha512"
   ],

@@ -32,7 +32,6 @@ enum MsgId
 	C_PLAYER_GAME_OVER = 24;
 	S_PLAYER_GAME_OVER_BROAD_CAST = 25;
 	S_GAME_RESULT = 26;
-
 }
 
 enum PacketState
@@ -47,4 +46,16 @@ enum GameRoomState
 	LOBBY = 0;
 	GAME = 1;
 	GAME_RESULT = 2;
+}
+
+enum E_BUBBLE_TYPE
+{
+    BUBBLE_NONE = 0;
+    RED = 1;
+    BLUE = 2;
+    YELLOW = 3;
+    GREEN = 4;
+    PURPLE = 5;
+    SPECIAL = 6;
+    MAX = 7;
 }

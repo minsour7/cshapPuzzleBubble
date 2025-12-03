@@ -15,9 +15,9 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<None Include="..\..\common\Protocol\Enum.proto" Link="Schema\Enum.proto" />
-		<None Include="..\..\common\Protocol\Protocol.proto" Link="Schema\Protocol.proto" />
-		<None Include="..\..\common\Protocol\Struct.proto" Link="Schema\Struct.proto" />
+		<None Include="..\..\Common\Protocol\Enum.proto" Link="Schema\Enum.proto" />
+		<None Include="..\..\Common\Protocol\Protocol.proto" Link="Schema\Protocol.proto" />
+		<None Include="..\..\Common\Protocol\Struct.proto" Link="Schema\Struct.proto" />
 		<None Include="..\GenProto.bat" Link="GenProto.bat" />
 	</ItemGroup>
 

@@ -6,11 +6,146 @@ option csharp_namespace = "Google.Protobuf.Protocol";
 import public "Enum.proto";
 import public "Struct.proto";
 
-message S_Connected 
+message S_Connect
+{
+	PlayerInfo Player = 1;
+}
+
+message C_RoomInfo
+{
+	int32 RoomId = 1;
+}
+
+message S_RoomInfo
+{
+	RoomInfo RoomInfo = 1;
+}
+
+message C_JoinGameRoom
+{
+	PlayerInfo Player = 1;
+}
+
+message S_JoinGameRoom
+{
+	RoomInfo RoomInfo = 1;
+}
+
+message S_LeaveGameRoom
 {
 }
 
-message C_Test 
+message S_Spawn
 {
-	int32 temp = 1;
+	int32 RoomId = 1;
+	repeated PlayerInfo Players = 2;
+}
+
+message S_Despawn
+{
+	int32 RoomInfo = 1;
+	PlayerInfo Player = 2;
+}
+
+message C_StartGame
+{
+	RoomInfo RoomInfo = 1;
+	int32 RoomId = 2;
+}
+
+message S_StartGame
+{
+	int32 RoomId = 1;
+}
+
+message C_Shoot
+{
+	int32 RadianAngle = 1;
+}
+
+message S_Shoot
+{
+	int32 PlayerId = 1;
+	int32 RadianAngle = 2;
+}
+
+message C_Move
+{
+	int32 PosX = 1;
+	int32 PosY = 2;
+}
+
+message S_Move
+{
+	int32 PlayerId = 1;
+	int32 PosX = 2;
+	int32 PosY = 3;
+}
+
+message C_NextBubbles
+{
+    int32 ReqCount = 1;
+}
+
+message S_NextBubbles
+{
+    repeated int32 BubbleTypes = 1;
+}
+
+message S_NextBubblesPeer
+{
+    int32 PlayerId = 1;
+    repeated int32 BubbleTypes = 2;
+}
+
+message C_NextColsBubble
+{
+}
+
+message S_NextColsBubble
+{
+    repeated int32 BubbleTypes = 1;
+}
+
+message S_NextColsBubblePeer
+{
+    int32 PlayerId = 1;
+    repeated int32 BubbleTypes = 2;
+}
+
+message C_NextColsBubbleList
+{
+    int32 ColsCount = 1;
+}
+
+message S_NextColsBubbleList
+{
+    repeated ColsBubbles ColsBubbles = 1;
+}
+
+message C_FixedBubbleSlot
+{
+    int32 ColsSlotId = 1;
+    int32 SlotId = 2;
+}
+
+message S_FixedBubbleSlotPeer
+{
+    int32 PlayerId = 1;
+    int32 ColsSlotId = 2;
+    int32 SlotId = 3;
+}
+
+message C_PlayerGameOver
+{
+}
+
+message S_PlayerGameOverBroadCast
+{
+    PlayerRank PlayerRank = 1;
+}
+
+message S_GameResult
+{
+    repeated PlayerRank PlayerRanks = 1;
 }

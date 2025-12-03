@@ -18,3 +18,5 @@ D:\Git\cshapPuzzleBubble\server\Server\obj\Debug\net8.0\refint\Server.dll
 D:\Git\cshapPuzzleBubble\server\Server\obj\Debug\net8.0\Server.pdb
 D:\Git\cshapPuzzleBubble\server\Server\obj\Debug\net8.0\Server.genruntimeconfig.cache
 D:\Git\cshapPuzzleBubble\server\Server\obj\Debug\net8.0\ref\Server.dll
+D:\Git\cshapPuzzleBubble\server\Server\bin\Debug\net8.0\config.json
+D:\Git\cshapPuzzleBubble\server\Server\bin\Debug\net8.0\Newtonsoft.Json.dll
